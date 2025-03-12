@@ -43,7 +43,7 @@ replace_strings(curvedrailb.pictures, "__base__", "__minimalist-rails__")
 replace_strings(halfdiagonalrail.pictures, "__base__", "__minimalist-rails__")
 
 
-
+--[[
 log(serpent.block("____________straightrail"))
 log(serpent.block(straightrail.pictures))
 log(serpent.block("____________curvedraila"))
@@ -52,5 +52,5 @@ log(serpent.block("____________curvedrailb"))
 log(serpent.block(curvedrailb.pictures))
 log(serpent.block("____________halfdiagonalrail"))
 log(serpent.block(halfdiagonalrail.pictures))
-
+]]
 data:extend({straightrail, curvedraila, curvedrailb, halfdiagonalrail})
