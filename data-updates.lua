@@ -1,10 +1,10 @@
-if data.raw.technology["railway"] then
+--[[if data.raw.technology["railway"] then
   table.insert(data.raw.technology["railway"].effects,
   {
     type = "unlock-recipe",
     recipe = "rail-minimal"
   })
-end
+end]]
 
 local function one_gravity_condition()
   return

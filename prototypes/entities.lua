@@ -45,7 +45,7 @@ replace_strings(halfdiagonalrail.pictures, "__base__", "__minimalist-rails__")
 
 --[[
 log(serpent.block("____________straightrail"))
-log(serpent.block(straightrail.pictures))
+log(serpent.block(straightrail))
 log(serpent.block("____________curvedraila"))
 log(serpent.block(curvedraila.pictures))
 log(serpent.block("____________curvedrailb"))

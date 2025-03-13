@@ -12,6 +12,7 @@ data:extend({
     drop_sound = item_sounds.train_inventory_move,
     place_result = "straight-rail-minimal",
     stack_size = 100,
+    weight = 10*kg,
     rails =
     {
       "straight-rail-minimal",
