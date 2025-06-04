@@ -11,7 +11,7 @@ local function one_gravity_condition()
   {
     {
       property = "gravity",
-      min = 1
+      min = 0.1
     }
   }
 end
