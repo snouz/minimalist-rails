@@ -23,3 +23,27 @@ data:extend({
     manual_length_limit = 22.5 -- 2*(Curved-A) + 2*(Curved-B) + their planner penalty + margin
   },
 })
+
+if mods["elevated-rails"] then
+  data:extend({
+    {
+      type = "rail-planner",
+      name = "rail-ramp-minimal",
+      icon = "__minimalist-rails__/graphics/icons/rail-ramp-minimal.png",
+      subgroup = "train-transport",
+      order = "a[rail]-b2[rail-ramp-minimal]",
+      inventory_move_sound = item_sounds.train_inventory_move,
+      pick_sound = item_sounds.train_inventory_pickup,
+      drop_sound = item_sounds.train_inventory_move,
+      place_result = "rail-ramp-minimal",
+      rails =
+      {
+        "straight-rail-minimal",
+        "curved-rail-a-minimal",
+        "curved-rail-b-minimal",
+        "half-diagonal-rail-minimal"
+      },
+      stack_size = 10,
+    },
+  })
+end

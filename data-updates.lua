@@ -21,6 +21,13 @@ if mods["space-age"] then
   data.raw["curved-rail-a"]["curved-rail-a-minimal"].surface_conditions = one_gravity_condition()
   data.raw["half-diagonal-rail"]["half-diagonal-rail-minimal"].surface_conditions = one_gravity_condition()
   data.raw["straight-rail"]["straight-rail-minimal"].surface_conditions = one_gravity_condition()
+  if mods["elevated-rails"] then
+    data.raw["rail-ramp"]["rail-ramp-minimal"].surface_conditions = one_gravity_condition()
+    data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b-minimal"].surface_conditions = one_gravity_condition()
+    data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a-minimal"].surface_conditions = one_gravity_condition()
+    data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail-minimal"].surface_conditions = one_gravity_condition()
+    data.raw["elevated-straight-rail"]["elevated-straight-rail-minimal"].surface_conditions = one_gravity_condition()
+  end
 end
 
 if mods["elevated-rails"] then
@@ -29,11 +36,11 @@ if mods["elevated-rails"] then
   local rail_planner_with_elevated_rails_update =
   {
     rails = meld.append({
-      "rail-ramp",
-      "elevated-straight-rail",
-      "elevated-curved-rail-a",
-      "elevated-curved-rail-b",
-      "elevated-half-diagonal-rail"
+      "rail-ramp-minimal",
+      "elevated-straight-rail-minimal",
+      "elevated-curved-rail-a-minimal",
+      "elevated-curved-rail-b-minimal",
+      "elevated-half-diagonal-rail-minimal"
     }),
     support = "rail-support"
   }
