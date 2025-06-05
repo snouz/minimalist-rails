@@ -2,6 +2,7 @@
 Version: 1.3.0
 Date: 2025-06-
   Changes:
+    - Made electric connector (when Moshine is used) immune to lightning (even on modded planets)
     - Improved graphics
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2

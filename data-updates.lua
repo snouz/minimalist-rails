@@ -42,3 +42,11 @@ if mods["elevated-rails"] then
     meld(data.raw["rail-planner"]["rail-minimal"], rail_planner_with_elevated_rails_update)
   end
 end
+
+for _, planet in pairs(data.raw["planet"]) do
+  if planet.lightning_properties and planet.lightning_properties.exemption_rules then
+    if data.raw["electric-pole"]["hidden-rail-pole"] then
+      table.insert(planet.lightning_properties.exemption_rules, {type = "id", string = "hidden-rail-pole"})
+    end
+  end
+end
