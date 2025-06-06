@@ -21,61 +21,31 @@ local function iselevatedrail(entity)
 end
 
 local function get_connected_rails(entity)
-  entity.force.print("get_connected_rails 0")
   local connected = {}
   if israil(entity) or iselevatedrail(entity) then
-   entity.force.print("get_connected_rails 1")
     local rail_directions = {defines.rail_direction.front, defines.rail_direction.back}
     local connection_directions = {defines.rail_connection_direction.left, defines.rail_connection_direction.straight, defines.rail_connection_direction.right}
 
     for _, rail_dir in pairs(rail_directions) do
-      entity.force.print("get_connected_rails 2")
       for _, conn_dir in pairs(connection_directions) do
-        entity.force.print("get_connected_rails 3")
-       local neighbor = entity.get_connected_rail{
-        rail_direction = rail_dir,
-        rail_connection_direction = conn_dir
-       }
-       if neighbor and neighbor.valid then
-        table.insert(connected, neighbor)
-        entity.force.print("get_connected_rails 4")
-       end
+        local neighbor = entity.get_connected_rail{
+          rail_direction = rail_dir,
+          rail_connection_direction = conn_dir
+        }
+        if neighbor and neighbor.valid then
+          table.insert(connected, neighbor)
+        end
       end
     end
-   end
+  end
 
   return connected
 end
 
-  --[[local function get_connected_rails(entity)
-    -- Gets rail connections on all four directions
-    local rails = {}
-    if israil(entity) or iselevatedrail(entity) then
-
-     local dirs = 
-     entity.get_connected_rail{rail_direction=defines.rail_direction.front, rail_connection_direction=defines.rail_connection_direction.left}
-     entity.get_connected_rail{rail_direction=defines.rail_direction.front, rail_connection_direction=defines.rail_connection_direction.right}
-     entity.get_connected_rail{rail_direction=defines.rail_direction.back, rail_connection_direction=defines.rail_connection_direction.left}
-     entity.get_connected_rail{rail_direction=defines.rail_direction.back, rail_connection_direction=defines.rail_connection_direction.right}
-     local test = get_connected_rail() or "test1"
-     entity.force.print("test: " .. test)
-     --for _, conn in pairs(entity.get_connected_rail()) do
-     --  table.insert(rails, conn.entity)
-     --end
-    end
-    return rails
-  end]]
-
 local function try_connect_poles(pole1, pole2)
   if pole1 and pole1.valid and pole2 and pole2.valid then
-   -- Force connection regardless of range
-   pole1.get_wire_connector(defines.wire_connector_id.pole_copper, true).connect_to(
-      pole2.get_wire_connector(defines.wire_connector_id.pole_copper, true), false, defines.wire_origin.script)
-   --pole1.force.print("try_connect_poles ok")
-   --pole1.connect_neighbour{
-   --  wire = defines.wire_type.green,
-   --  target_entity = pole2
-   --}
+    -- Force connection regardless of range
+    pole1.get_wire_connector(defines.wire_connector_id.pole_copper, true).connect_to(pole2.get_wire_connector(defines.wire_connector_id.pole_copper, true), false, defines.wire_origin.script)
   end
 end
 
