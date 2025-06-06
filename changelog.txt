@@ -5,7 +5,7 @@ Date: 2025-06-06
     - Brought the electrical functionality from Moshine into this mod directly
     - Made electricity connection more visual: visually connects to normal poles, invisible along the tracks.
     - Added elevated rails and ramps (custom graphics)
-    - Made electric connector (when Moshine is used) immune to lightning (even on modded planets)
+    - Made electric connector immune to lightning (even on modded planets)
     - Improved graphics
     - Changed name and thumbnail
 ---------------------------------------------------------------------------------------------------
