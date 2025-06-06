@@ -93,7 +93,6 @@ if mods["elevated-rails"] then
   elevated_halfdiagonalrail.minable = {mining_time = 0.2, result = "rail-minimal", count = 2}
   elevated_halfdiagonalrail.icon = "__minimalist-rails__/graphics/icons/elevated-rail-minimal-diagonal.png"
 
-  --local ent_pict = {elevated_railramp, elevated_straightrail, elevated_curvedraila, elevated_curvedrailb, elevated_halfdiagonalrail}
   local replaced_images = {
     "elevated-rail/elevated-rail-backplates.png",
     "elevated-rail/elevated-rail-base.png",
@@ -101,7 +100,6 @@ if mods["elevated-rails"] then
     "elevated-rail/elevated-rail-base-top.png",
     "elevated-rail-ramp/elevated-rail-ramp.png",
     "elevated-rail-ramp/elevated-rail-ramp-shadow.png",
-
   }
 
   local function escape_lua_pattern(s)

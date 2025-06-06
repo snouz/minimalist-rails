@@ -7,6 +7,7 @@ Date: 2025-06-06
     - Added elevated rails and ramps (custom graphics)
     - Made electric connector (when Moshine is used) immune to lightning (even on modded planets)
     - Improved graphics
+    - Changed name and thumbnail
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 2025-05-13
