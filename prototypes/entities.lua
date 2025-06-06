@@ -93,17 +93,30 @@ if mods["elevated-rails"] then
   elevated_halfdiagonalrail.minable = {mining_time = 0.2, result = "rail-minimal", count = 2}
   elevated_halfdiagonalrail.icon = "__minimalist-rails__/graphics/icons/elevated-rail-minimal-diagonal.png"
 
-  replace_strings(elevated_railramp.pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_straightrail.pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_curvedraila.pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_curvedrailb.pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_halfdiagonalrail.pictures, "__elevated", "__minimalist")
+  --local ent_pict = {elevated_railramp, elevated_straightrail, elevated_curvedraila, elevated_curvedrailb, elevated_halfdiagonalrail}
+  local replaced_images = {
+    "elevated-rail/elevated-rail-backplates.png",
+    "elevated-rail/elevated-rail-base.png",
+    "elevated-rail/elevated-rail-base-shadow.png",
+    "elevated-rail/elevated-rail-base-top.png",
+    "elevated-rail-ramp/elevated-rail-ramp.png",
+    "elevated-rail-ramp/elevated-rail-ramp-shadow.png",
 
-  replace_strings(elevated_railramp.fence_pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_straightrail.fence_pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_curvedraila.fence_pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_curvedrailb.fence_pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_halfdiagonalrail.fence_pictures, "__elevated", "__minimalist") --%
+  }
+
+  local function escape_lua_pattern(s)
+    return s:gsub("([%%%^%$%(%)%.%[%]%*%+%-%?])", "%%%1")
+  end
+
+  for _, replaced_image in pairs(replaced_images) do
+    local pattern = escape_lua_pattern("__elevated-rails__/graphics/entity/" .. replaced_image)
+    local replacement = "__minimalist-rails__/graphics/entity/" .. replaced_image
+    replace_strings(elevated_railramp.pictures, pattern, replacement)
+    replace_strings(elevated_straightrail.pictures, pattern, replacement)
+    replace_strings(elevated_curvedraila.pictures, pattern, replacement)
+    replace_strings(elevated_curvedrailb.pictures, pattern, replacement)
+    replace_strings(elevated_halfdiagonalrail.pictures, pattern, replacement)
+  end
 
   --log(serpent.block(elevated_halfdiagonalrail.pictures))
   data:extend({elevated_railramp, elevated_straightrail, elevated_curvedraila, elevated_curvedrailb, elevated_halfdiagonalrail})
