@@ -103,7 +103,7 @@ if mods["elevated-rails"] then
   replace_strings(elevated_straightrail.fence_pictures, "__elevated", "__minimalist")
   replace_strings(elevated_curvedraila.fence_pictures, "__elevated", "__minimalist")
   replace_strings(elevated_curvedrailb.fence_pictures, "__elevated", "__minimalist")
-  replace_strings(elevated_halfdiagonalrail.fence_pictures, "__elevated", "__minimalist")
+  replace_strings(elevated_halfdiagonalrail.fence_pictures, "__elevated", "__minimalist") --%
 
   --log(serpent.block(elevated_halfdiagonalrail.pictures))
   data:extend({elevated_railramp, elevated_straightrail, elevated_curvedraila, elevated_curvedrailb, elevated_halfdiagonalrail})
