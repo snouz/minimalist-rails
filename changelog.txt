@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2025-06-15
+  Changes:
+    - Rails also auto-connect red and green wires along the tracks
+    - Made the "replaceable group" and health boost part of this mod instead of Moshine
+    - Added Made rail ramp automatically replaceable
+  Bugfixes:
+    - Fixed invisible poles under elevated rails not being immune to thunder
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2025-06-07
   Bugfixes:

@@ -55,5 +55,8 @@ for _, planet in pairs(data.raw["planet"]) do
     if data.raw["electric-pole"]["hidden-rail-pole"] then
       table.insert(planet.lightning_properties.exemption_rules, {type = "id", string = "hidden-rail-pole"})
     end
+    if data.raw["electric-pole"]["hidden-rail-pole-invisible"] then
+      table.insert(planet.lightning_properties.exemption_rules, {type = "id", string = "hidden-rail-pole-invisible"})
+    end
   end
 end

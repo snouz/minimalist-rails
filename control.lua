@@ -46,6 +46,8 @@ local function try_connect_poles(pole1, pole2)
   if pole1 and pole1.valid and pole2 and pole2.valid then
     -- Force connection regardless of range
     pole1.get_wire_connector(defines.wire_connector_id.pole_copper, true).connect_to(pole2.get_wire_connector(defines.wire_connector_id.pole_copper, true), false, defines.wire_origin.script)
+    pole1.get_wire_connector(defines.wire_connector_id.circuit_red, true).connect_to(pole2.get_wire_connector(defines.wire_connector_id.circuit_red, true), false, defines.wire_origin.script)
+    pole1.get_wire_connector(defines.wire_connector_id.circuit_green, true).connect_to(pole2.get_wire_connector(defines.wire_connector_id.circuit_green, true), false, defines.wire_origin.script)
   end
 end
 
