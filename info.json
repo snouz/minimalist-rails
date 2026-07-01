@@ -1,11 +1,11 @@
 {
 	"name": "minimalist-rails",
-	"version": "2.0.5",
+	"version": "2.0.7",
 	"title": "Minimal Electric Rails",
 	"author": "snouz",
 	"homepage": "https://mods.factorio.com/mod/minimalist-rails",
 	"description": "Adds rails without gravel/wood that also conduct electricity, contains an elevated version too.",
-	"factorio_version": "2.0",
+	"factorio_version": "2.1",
 	"dependencies": [
 		"base",
 		"? elevated-rails"

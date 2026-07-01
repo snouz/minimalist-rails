@@ -1,8 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 2026-06-23
+  Info:
+    - Updated to 2.1
+  Graphics:
+    - Optimized size
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2026-06-14
+  Changes:
+    - Created custom tech icon for elevated rails
+    - Neodymium ramps placed after normal ones
+  Locale:
+    - Polish locale by S3BA
+---------------------------------------------------------------------------------------------------
 Version: 2.0.5
-Date: 2025-08-
+Date: 2025-10-13
+  Compatibility:
+    - Fixed compatibility with Space Exploration
   Locale:
     - German locale by Schlumpf
+    - French locale (by me)
+    - Fixed half-diagonal/curved names being switched
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 2025-06-15

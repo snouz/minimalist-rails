@@ -31,7 +31,7 @@ if mods["elevated-rails"] then
       name = "rail-ramp-minimal",
       icon = "__minimalist-rails__/graphics/icons/rail-ramp-minimal.png",
       subgroup = "train-transport",
-      order = "a[rail]-b2[rail-ramp-minimal]",
+      order = "a[rail]-c2[rail-ramp-minimal]",
       inventory_move_sound = item_sounds.train_inventory_move,
       pick_sound = item_sounds.train_inventory_pickup,
       drop_sound = item_sounds.train_inventory_move,

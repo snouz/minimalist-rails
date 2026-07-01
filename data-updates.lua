@@ -48,6 +48,16 @@ if mods["elevated-rails"] then
   if data.raw.technology["elevated-rail"] then
     meld(data.raw["rail-planner"]["rail-minimal"], rail_planner_with_elevated_rails_update)
   end
+
+  --if mods["space-exploration"] and data.raw["rail-ramp"]["se-space-rail-ramp"] then
+  --  data.raw["rail-ramp"]["rail-ramp-minimal"].collision_mask = data.raw["rail-ramp"]["se-space-rail-ramp"].collision_mask
+    --data.raw["rail-ramp"]["se-space-rail-ramp"].next_upgrade = nil
+    --data.raw["elevated-curved-rail-b"]["se-space-elevated-curved-rail-b"].next_upgrade = nil
+    --data.raw["elevated-curved-rail-a"]["se-space-elevated-curved-rail-a"].next_upgrade = nil
+    --data.raw["elevated-half-diagonal-rail"]["se-space-elevated-half-diagonal-rail"].next_upgrade = nil
+    --data.raw["elevated-straight-rail"]["se-space-elevated-straight-rail"].next_upgrade = nil
+  --end
+
 end
 
 for _, planet in pairs(data.raw["planet"]) do

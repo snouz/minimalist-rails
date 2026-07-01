@@ -75,10 +75,12 @@ data.raw["curved-rail-a"]["curved-rail-a"].fast_replaceable_group = "curved-rail
 data.raw["half-diagonal-rail"]["half-diagonal-rail"].fast_replaceable_group = "half-diagonal-rail"
 data.raw["straight-rail"]["straight-rail"].fast_replaceable_group = "straight-rail"
 
-data.raw["curved-rail-b"]["curved-rail-b"].next_upgrade = "curved-rail-b-minimal"
-data.raw["curved-rail-a"]["curved-rail-a"].next_upgrade = "curved-rail-a-minimal"
-data.raw["half-diagonal-rail"]["half-diagonal-rail"].next_upgrade = "half-diagonal-rail-minimal"
-data.raw["straight-rail"]["straight-rail"].next_upgrade = "straight-rail-minimal"
+if not mods["space-exploration"] then
+  data.raw["curved-rail-b"]["curved-rail-b"].next_upgrade = "curved-rail-b-minimal"
+  data.raw["curved-rail-a"]["curved-rail-a"].next_upgrade = "curved-rail-a-minimal"
+  data.raw["half-diagonal-rail"]["half-diagonal-rail"].next_upgrade = "half-diagonal-rail-minimal"
+  data.raw["straight-rail"]["straight-rail"].next_upgrade = "straight-rail-minimal"
+end
 
 if mods["elevated-rails"] then
   local elevated_railramp = table.deepcopy(data.raw["rail-ramp"]["rail-ramp"])
@@ -150,6 +152,7 @@ if mods["elevated-rails"] then
 
   data.raw["rail-ramp"]["rail-ramp"].fast_replaceable_group = "rail-ramp"
   data.raw["rail-ramp"]["rail-ramp-minimal"].fast_replaceable_group = "rail-ramp"
+  data.raw["rail-ramp"]["rail-ramp"].order = "a[rail]-b1[rail-ramp]"
   data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].fast_replaceable_group = "elevated-curved-rail-b"
   data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b-minimal"].fast_replaceable_group = "elevated-curved-rail-b"
   data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].fast_replaceable_group = "elevated-curved-rail-a"
@@ -163,16 +166,11 @@ if mods["elevated-rails"] then
   data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a-minimal"].minable.mining_time = 3
   data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail-minimal"].minable.mining_time = 2
   data.raw["elevated-straight-rail"]["elevated-straight-rail-minimal"].minable.mining_time = 1
-
-  data.raw["rail-ramp"]["rail-ramp"].next_upgrade = "rail-ramp-minimal"
-  data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].next_upgrade = "elevated-curved-rail-b-minimal"
-  data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].next_upgrade = "elevated-curved-rail-a-minimal"
-  data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"].next_upgrade = "elevated-half-diagonal-rail-minimal"
-  data.raw["elevated-straight-rail"]["elevated-straight-rail"].next_upgrade = "elevated-straight-rail-minimal"
-end
-
-
-
-
-  if mods["elevated-rails"] then
+  if not mods["space-exploration"] then
+    data.raw["rail-ramp"]["rail-ramp"].next_upgrade = "rail-ramp-minimal"
+    data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].next_upgrade = "elevated-curved-rail-b-minimal"
+    data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].next_upgrade = "elevated-curved-rail-a-minimal"
+    data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"].next_upgrade = "elevated-half-diagonal-rail-minimal"
+    data.raw["elevated-straight-rail"]["elevated-straight-rail"].next_upgrade = "elevated-straight-rail-minimal"
   end
+end
