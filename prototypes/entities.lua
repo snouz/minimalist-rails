@@ -99,25 +99,25 @@ if mods["elevated-rails"] then
   elevated_straightrail.name = "elevated-straight-rail-minimal"
   elevated_straightrail.placeable_by = {item = "rail-minimal", count = 1}
   elevated_straightrail.minable = {mining_time = 0.2, result = "rail-minimal", count = 1}
-  elevated_straightrail.icon = "__minimalist-rails__/graphics/icons/elevated-rail-minimal.png"
+  elevated_straightrail.icon = "__minimalist-rails__/graphics/icons/elevated-rail.png"
 
   elevated_curvedraila.name = "elevated-curved-rail-a-minimal"
   elevated_curvedraila.placeable_by = {item = "rail-minimal", count = 3}
   elevated_curvedraila.deconstruction_alternative = "elevated-straight-rail-minimal"
   elevated_curvedraila.minable = {mining_time = 0.2, result = "rail-minimal", count = 3}
-  elevated_curvedraila.icon = "__minimalist-rails__/graphics/icons/elevated-rail-minimal-curved.png"
+  elevated_curvedraila.icon = "__minimalist-rails__/graphics/icons/elevated-curved-rail.png"
 
   elevated_curvedrailb.name = "elevated-curved-rail-b-minimal"
   elevated_curvedrailb.placeable_by = {item = "rail-minimal", count = 3}
   elevated_curvedrailb.deconstruction_alternative = "elevated-straight-rail-minimal"
   elevated_curvedrailb.minable = {mining_time = 0.2, result = "rail-minimal", count = 3}
-  elevated_curvedrailb.icon = "__minimalist-rails__/graphics/icons/elevated-rail-minimal-curved.png"
+  elevated_curvedrailb.icon = "__minimalist-rails__/graphics/icons/elevated-curved-rail-b.png"
 
   elevated_halfdiagonalrail.name = "elevated-half-diagonal-rail-minimal"
   elevated_halfdiagonalrail.placeable_by = {item = "rail-minimal", count = 2}
   elevated_halfdiagonalrail.deconstruction_alternative = "elevated-straight-rail-minimal"
   elevated_halfdiagonalrail.minable = {mining_time = 0.2, result = "rail-minimal", count = 2}
-  elevated_halfdiagonalrail.icon = "__minimalist-rails__/graphics/icons/elevated-rail-minimal-diagonal.png"
+  elevated_halfdiagonalrail.icon = "__minimalist-rails__/graphics/icons/elevated-half-diagonal-rail.png"
 
   local replaced_images = {
     "elevated-rail/elevated-rail-backplates.png",
