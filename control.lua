@@ -117,25 +117,52 @@ local function remove_invisible_hidden_pole(rail)
   end
 end
 
+local destroy_filters = {
+  {filter = "rail"},
+}
+
+
 -- Register event for when a rail is built
-script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_built, defines.events.script_raised_revive}, function(event)
+local function on_entity_created(event)
    local entity = event.created_entity or event.entity
    if israil(entity) then
       place_hidden_pole(entity)
    elseif iselevatedrail(entity) then
       place_invisible_hidden_pole(entity)
    end
-end)
+end
 
 -- Register event for when a rail is removed
-script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.on_entity_died, defines.events.script_raised_destroy}, function(event)
+local function on_entity_removed(event)
    local entity = event.entity
    if israil(entity) then
       remove_hidden_pole(entity)
    elseif iselevatedrail(entity) then
       remove_invisible_hidden_pole(entity)
    end
-end)
+end
+
+
+
+
+
+script.on_event(defines.events.on_built_entity, on_entity_created, destroy_filters)
+script.on_event(defines.events.on_robot_built_entity, on_entity_created, destroy_filters)
+script.on_event(defines.events.script_raised_built, on_entity_created, destroy_filters)
+script.on_event(defines.events.script_raised_revive, on_entity_created, destroy_filters)
+
+
+
+script.on_event(defines.events.on_player_mined_entity, on_entity_removed, destroy_filters)
+script.on_event(defines.events.on_robot_mined_entity, on_entity_removed, destroy_filters)
+script.on_event(defines.events.on_entity_died, on_entity_removed, destroy_filters)
+script.on_event(defines.events.on_pre_player_mined_item, on_entity_removed, destroy_filters)
+script.on_event(defines.events.script_raised_destroy, on_entity_removed, destroy_filters)
+script.on_event(defines.events.on_robot_pre_mined, on_entity_removed, destroy_filters)
+
+
+
+
 
 
 
